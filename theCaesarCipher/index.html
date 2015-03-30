@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Шифр Цезаря</title>
+    <link rel="icon" href="theCaesarCipher.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="buttonStyle.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="wrapperChoice">
+        <div id="descriptionChoice">Я хочу</div>
+        <div  id="encrypt">Зашифоровать</div>
+        <div id="decrypt">Расшифоровать</div>
+        <div class="key"><label>Ключ <input type="text" maxlength="2" autofocus></label></div>
+    </div>
+    <div class="leftColumn">
+        <!--<a class="commandButton"><span class="description">Зашифровать</span></a>
+        <a class="commandButton"><span class="description">Расшифоровать</span></a>-->
+    </div>
+    <div class="rightColumn">
+       <div class="incomingMsg">Исходный текст</div>
+        <textarea name="text" placeholder="Введите текст..."></textarea>
+	    <div class="outcomingMsg">Текст сообщения</div>
+        <textarea name="text" class="last"></textarea>
+    </div>
+</div>
+</body>
+</html>
