@@ -8,7 +8,7 @@ body {
 
 .wrapperChoice {
     display: block;
-    font-size: 18px;
+    font-size: 24px;
     color: #404040;
     padding-top: 30px;
     text-align: center;
@@ -23,26 +23,59 @@ body {
     background: -ms-linear-gradient(top,  #f7f7f7 0%,#ffffff 100%); /* IE10+ */
     background: linear-gradient(to bottom,  #f7f7f7 0%,#ffffff 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
-;
 }
 
-#encrypt, #decrypt, #descriptionChoice {
-    display: inline-block;
+#encrypt {
+margin-left: 738px;
+margin-top: 10px;
+}
+
+#decrypt {
     margin-left: 30px;
-    font-size: 18px;
-}
-
-#descriptionChoice {
-    margin-right: 20px;
-    font-size: 23px;
 }
 
 #encrypt, #decrypt {
-    border: 1px solid #37662b;
-    color: #ffffff;
-    background-color: #4ba81d;
-    border-radius: 2px;
-    padding: 6px 12px;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1.4em;
+    border-radius: 3px;
+    background: rgb(64,199,129);
+    box-shadow: 0 -3px rgb(53,167,110) inset;
+    transition: 0.2s;
+}
+
+#encrypt:hover, #decrypt:hover {
+    background: rgb(53, 167, 110);
+}
+
+#encrypt:active, #decrypt:active {
+    background: rgb(33,147,90);
+    box-shadow: 0 3px rgb(33,147,90) inset;
+}
+
+#clear {
+    margin-left: 24px;
+    display: inline-block;
+    font-size: 17px;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1.6em;
+    border-radius: 3px;
+    background: #f5a600;
+    box-shadow: 0 -3px #d77206 inset;
+    transition: 0.2s;
+}
+
+#clear:hover {
+    background: #d77206;
+}
+
+#clear:active {
+    background: #D76805;
 }
 
 .leftColumn {
@@ -60,43 +93,13 @@ body {
     height: 100%;
 }
 
-a.commandButton {
-    border: 1px solid #37662b;
-    border-top-color: #4a803c;
-    background-color: #4ba81d;
-    display: block;
-    margin: 32px 0 40px 30px;
-    height: 38px;
-    width: 177px;
-    color: #ffffff;
-    border-radius: 2px;
-    position: relative;
-
-}
-
-.commandButton:last-child {
-    margin-top: 30px;
-}
-
-span.description {
-    color: #ffffff;
-    font-size: 16px;
-    text-align: center;
-    position: absolute;
-    left: 30px;
-    line-height: 36px;
-}
-
 .key {
-    display: block;
-    margin-left: 31px;
-    text-align: center;
-    margin-top: 20px;
     margin-bottom: 10px;
 }
 
 input {
     width: 124px;
+    height: 20px;
     border: 1px solid #a0a0a0;
     border-bottom-color: #838383;
     padding-left: 5px;
@@ -104,21 +107,26 @@ input {
 }
 
 textarea {
-    display: block;
     margin-left: 25px;
-    height: 100px;
+    display: inline-block;
+    height: 205px;
+    width: 630px;
     font-family: "Segoe UI", sans-serif;
+    font-size: 16px;
     color: #404040;
     padding: 4px;
     border: 2px solid #cccccc;
     border-radius: 5px;
 }
 
-textarea.last {
-    margin-top: 15px;
+.incomingMsg {
+    display: inline-block;
+    margin-left: 25px;
+    margin-bottom: 10px;
 }
 
-.incomingMsg {
+.outcomingMsg {
+    display: inline-block;
     margin-left: 25px;
     margin-bottom: 10px;
 }
