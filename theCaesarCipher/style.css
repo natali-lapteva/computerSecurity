@@ -45,6 +45,7 @@ margin-top: 10px;
     background: rgb(64,199,129);
     box-shadow: 0 -3px rgb(53,167,110) inset;
     transition: 0.2s;
+    cursor: pointer;
 }
 
 #encrypt:hover, #decrypt:hover {
@@ -58,6 +59,7 @@ margin-top: 10px;
 
 #clear {
     margin-left: 24px;
+    margin-bottom: 20px;
     display: inline-block;
     font-size: 17px;
     font-weight: 500;
@@ -68,6 +70,7 @@ margin-top: 10px;
     background: #f5a600;
     box-shadow: 0 -3px #d77206 inset;
     transition: 0.2s;
+    cursor: pointer;
 }
 
 #clear:hover {
@@ -76,21 +79,6 @@ margin-top: 10px;
 
 #clear:active {
     background: #D76805;
-}
-
-.leftColumn {
-    position: fixed;
-    float: left;
-    width: 250px;
-    background-color: #f7f7f7;
-    height: 100%;
-    overflow: auto;
-    border-radius: 5px;
-}
-
-.rightColumn {
-    margin-left: 250px;
-    height: 100%;
 }
 
 .key {
@@ -119,14 +107,19 @@ textarea {
     border-radius: 5px;
 }
 
-.incomingMsg {
-    display: inline-block;
-    margin-left: 25px;
-    margin-bottom: 10px;
-}
-
-.outcomingMsg {
-    display: inline-block;
-    margin-left: 25px;
-    margin-bottom: 10px;
+.msgToUserVvediteChislo {
+    font-size: 17px;
+    background: #fb9d23; /* Old browsers */
+    background: -moz-linear-gradient(top,  #fb9d23 0%, #ffc578 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fb9d23), color-stop(100%,#ffc578)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #fb9d23 0%,#ffc578 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #fb9d23 0%,#ffc578 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #fb9d23 0%,#ffc578 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #fb9d23 0%,#ffc578 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fb9d23', endColorstr='#ffc578',GradientType=0 ); /* IE6-9 */
+    text-align: center;
+    height: 80px;
+    border-bottom: 1px solid #eae9e8;
+    line-height: 88px;
+    visibility: hidden;
 }
