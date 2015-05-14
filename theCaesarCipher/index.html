@@ -6,7 +6,8 @@
     <link rel="icon" href="theCaesarCipher.png">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="buttonStyle.css">
-    <script src="encript.js"></script>
+    <script src="encrypt.js"></script>
+    <script src="decrypt.js"></script>
     <script src="jquery-2.1.4.js"></script>
 </head>
 <body>
@@ -17,9 +18,9 @@
     <textarea name="text" placeholder="Введите текст..." id="inText"></textarea>
     <textarea name="text" class="last" id="outputText"></textarea>
         <div id="clear">Очистить поля</div>
-    <div id="encrypt" onclick="encript()">Зашифоровать</div>
-    <div id="decrypt">Расшифоровать</div>
-    <div class="msgToUserVvediteChislo">Поле "Ключ" должно содержать число в диапазоне от -32 до 32 значение.</div>
+    <div id="encrypt" onclick="encrypt()">Зашифровать</div>
+    <div id="decrypt" onclick="decrypt()">Расшифровать</div>
+    <div class="msgToUserVvediteChislo">Поле "Ключ" должно быть целым числом.</div>
 </div>
 </body>
 </html>

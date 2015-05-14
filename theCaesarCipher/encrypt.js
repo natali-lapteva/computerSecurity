@@ -1,13 +1,14 @@
 var alphabet = 'АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ';
 
-function encript () {
-    var key = parseInt($('#key').val(), 10);
-        if (isNaN(key)) {
-            $('.msgToUserVvediteChislo').css('visibility', 'visible');
-        }
-    console.log(key);
+function encrypt () {
+    $('.msgToUserVvediteChislo').css('visibility', 'hidden');
+    var key = $('#key').val();
+    if (!/^-?\d+$/.test(key)) {
+        $('.msgToUserVvediteChislo').css('visibility', 'visible');
+        return;
+    }
+    key = parseInt(key, 10);
     var inText = $('#inText').val().toUpperCase().replace(/Ё/g, 'Е');
-    console.log(inText);
     var outText = [];
     var spaceCounter = 0;
     for (var i = 0; i < inText.length; i++) {
@@ -19,7 +20,6 @@ function encript () {
                 outText.push(' ');
             }
         }
-    };
+    }
     $('#outputText').val(outText.join(''));
-    console.log(outText.join(''));
 }
