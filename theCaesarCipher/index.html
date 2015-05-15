@@ -12,15 +12,26 @@
 </head>
 <body>
 <div class="wrapper">
-    <div class="wrapperChoice">
+    <div class="wrapperKey">
         <div class="key"><label>Ключ <input type="number" autofocus id="key"></label></div>
     </div>
-    <textarea name="text" placeholder="Введите текст..." id="inText"></textarea>
-    <textarea name="text" class="last" id="outputText"></textarea>
-        <div id="clear">Очистить поля</div>
-    <div id="encrypt" onclick="encrypt()">Зашифровать</div>
-    <div id="decrypt" onclick="decrypt()">Расшифровать</div>
+    <div class="textareaWrapper">
+        <textarea name="text" id="inText" placeholder="Введите текст..." ></textarea>
+        <textarea name="text" id="outputText" placeholder="Расшифрованный текст появится здесь" readonly></textarea>
+    </div>
+    <div class="buttonWrapper">
+        <div id="clear" onclick="clField()">Очистить поля</div>
+        <div id="encrypt" onclick="encrypt()">Зашифровать</div>
+        <div id="decrypt" onclick="decrypt()">Расшифровать</div>
+    </div>
     <div class="msgToUserVvediteChislo">Поле "Ключ" должно быть целым числом.</div>
 </div>
+<script>
+    function clField () {
+        $('#inText').val('');
+        $('#outputText').val('');
+        $('#key').val('').focus();
+    }
+</script>
 </body>
 </html>

@@ -39,13 +39,14 @@ function decrypt () {
     for (var i = 0; i < alphabet.length; i++) {
         frequency[alphabet[i]] = 0;
     }
-    // составление частотного словаря
+    // составление частотного словаря шифрованного текста
     for (var i = 0; i < cipherText.length; i++) {
         frequency[cipherText[i]]++;
     }
     for (var i = 0; i < alphabet.length; i++) {
         frequency[alphabet[i]] = frequency[alphabet[i]] / cipherText.length;
     }
+    // поиск расстояния между частотами шифр.текста и русскими частотами
     var minSum = Infinity;
     var key;
     for (var i = 0; i < alphabet.length; i++) {
@@ -53,6 +54,7 @@ function decrypt () {
         for (var j = 0; j < alphabet.length; j++) {
             sum = sum + Math.abs(frequency[alphabet[(j + i) % alphabet.length]] - russianFrequency[alphabet[j]]);
         }
+        // поиск ключа
         if (sum < minSum) {
             minSum = sum;
             key = i;
