@@ -1,4 +1,5 @@
-var alphabet = 'АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ';
+var ruAlphabet = 'АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ';
+var enAlphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
 function encrypt (sign) {
     $('.msgToUserVvediteChislo').css('visibility', 'hidden');
@@ -11,8 +12,9 @@ function encrypt (sign) {
     var inText = $('#inText').val().toUpperCase().replace(/Ё/g, 'Е');
     var outText = [];
     var spaceCounter = 0;
-    for (var i = 0; i < inText.length; i++) {
-        var index = alphabet.indexOf(inText[i]);
+
+    function addLetterToOutText (alphabet, letter) {
+        var index = alphabet.indexOf(letter);
         if (index >= 0 ) {
             index += key;
             while (index < 0) {
@@ -24,6 +26,11 @@ function encrypt (sign) {
                 outText.push(' ');
             }
         }
+    }
+
+    for (var i = 0; i < inText.length; i++) {
+       addLetterToOutText(ruAlphabet, inText[i]);
+       addLetterToOutText(enAlphabet, inText[i]);
     }
     $('#outputText').val(outText.join(''));
 }
