@@ -25,7 +25,7 @@ body {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
 }
 
-#encrypt, #decrypt {
+#encrypt, #decrypt, #hack {
     display: inline-block;
     font-size: 18px;
     font-weight: 500;
@@ -39,11 +39,11 @@ body {
     cursor: pointer;
 }
 
-#encrypt:hover, #decrypt:hover {
+#encrypt:hover, #decrypt:hover, #hack:hover {
     background: rgb(53, 167, 110);
 }
 
-#encrypt:active, #decrypt:active {
+#encrypt:active, #decrypt:active, #hack:active {
     background: rgb(33,147,90);
     box-shadow: 0 3px rgb(33,147,90) inset;
 }
@@ -73,6 +73,7 @@ body {
 
 .key {
     margin-bottom: 10px;
+    margin-top: 15px;
 }
 
 input {
@@ -85,7 +86,6 @@ input {
 }
 
 textarea {
-    margin-left: 25px;
     display: inline-block;
     height: 205px;
     width: 630px;

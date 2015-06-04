@@ -33,7 +33,7 @@ var russianFrequency = {
     Ю: 0.006,
     Я: 0.018
 };
-function decrypt () {
+function hack () {
     var cipherText = $('#inText').val().replace(/\s/g, '').toUpperCase();
     var frequency = {};
     for (var i = 0; i < alphabet.length; i++) {

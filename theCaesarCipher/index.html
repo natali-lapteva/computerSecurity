@@ -13,6 +13,7 @@
 <body>
 <div class="wrapper">
     <div class="wrapperKey">
+        <div><div>Шифр Цезаря</div></div>
         <div class="key"><label>Ключ <input type="number" autofocus id="key"></label></div>
     </div>
     <div class="textareaWrapper">
@@ -21,8 +22,9 @@
     </div>
     <div class="buttonWrapper">
         <div id="clear" onclick="clField()">Очистить поля</div>
-        <div id="encrypt" onclick="encrypt()">Зашифровать</div>
-        <div id="decrypt" onclick="decrypt()">Расшифровать</div>
+        <div id="encrypt" onclick="encrypt(1)">Зашифровать</div>
+        <div id="decrypt" onclick="encrypt(-1)">Расшифровать</div>
+        <div id="hack" onclick="hack()">Взломать</div>
     </div>
     <div class="msgToUserVvediteChislo">Поле "Ключ" должно быть целым числом.</div>
 </div>
